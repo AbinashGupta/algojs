@@ -26,16 +26,21 @@
 //     }  
 // }
 
-//my solution #2
-function steps(n, total) {
+// solution #2
+function steps(n, row = 0, stairs = '') {
 
-    const tot = total || n;
-    if ( n === 0 ) {
+    if ( n === row) {
         return
     }
+    
+    if (stairs.length === n) {
+        console.log(stairs)
+        return steps(n, row + 1)
+    }
 
-    console.log()
+    stairs.length <= row ? stairs += '#' : stairs += ' '
+
+    steps(n, row, stairs)
 
 }
-
 module.exports = steps;
