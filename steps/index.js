@@ -17,6 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// my solution #1
+// function steps(n) {
+//     const arr = Array(n).fill(' ');
+//     for (i=0; i<arr.length; i++) {
+//         arr[i] = '#';
+//         console.log(arr.join(''));
+//     }  
+// }
+
+//my solution #2
+function steps(n, total) {
+
+    const tot = total || n;
+    if ( n === 0 ) {
+        return
+    }
+
+    console.log()
+
+}
 
 module.exports = steps;
